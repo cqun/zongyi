@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include themes/Snail/head.html %}
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience {{ HOME_PATH }} fully&amp;lt;/div&amp;gt;
+	</noscript>
+    <div id="page-container">
+		<div>
+			{% include themes/Snail/nav.html %}
+			<div class="clearboth pagebottom"></div>
+		</div>
+
+        <div class="page-title-inline">
+            {% if page.group == 'home' %}
+            <h1>{{ site.title }} </h1>
+            {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+            {% else %}
+            <h1>{{ page.title }} </h1>
+            {% if page.author %}<h2> by {{ page.author }}</h2>{% endif %}
+            {% endif %}
+        </div>
+<div class="cont932">
+	<hr style="margin-top: 0;">
+	<div class="contentarea">
+		<div class="ca-center ca-center20t nobg">
+			<div class="journal-tags" id="teaminfo">
+			  {% assign tags_list = site.tags %}
+			  {% include themes/Snail/tags_list %}
+			</div>
+			<div class="clearboth"></div>
+			<hr>
+			<div>
+			{% for tag in site.tags %} 
+			<div  class="team-member">
+			  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+			  <ul>
+				{% assign pages_list = tag[1] %} 
+				{% include JB/pages_list %}
+			  </ul>
+			</div>
+			{% endfor %}
+			</div>
+			<div class="clearboth"></div>
+		</div>
+	</div>
+	<div class="clearboth"></div>
+</div>
+        <div class="clearboth"></div>
+
+
+	</div>
+	{% include themes/Snail/footer.html %}
+</body>
+</html>

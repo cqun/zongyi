@@ -1,0 +1,43 @@
+	<meta charset="utf-8">
+	{% if page.group == 'home' %}
+	<title>{{ site.title }}</title>
+    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+	{% else %}
+	<title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+	{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/main.css">
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/pages/journal.css">
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/team.css">
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/static.css">
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/errors.css">
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/google-code-prettify/prettify.css">
+	
+	<link rel="shortcut icon" href="{{ BASE_PATH }}{{ ASSET_PATH }}/img/favicon.ico">
+	
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/js/jquery.min.js"></script>
+	{% if site.auto_loadmore == true %}
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/js/auto_loadmore.js"></script>
+	{% else %}
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/js/loadmore.js"></script>
+	{% endif %}
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
+	
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+	
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">

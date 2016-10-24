@@ -1,0 +1,63 @@
+<footer>
+	<div class="footer_stats">
+	</div>
+	<div class="container footerWrap">
+		<div class="row">
+			<div class="col-md-4 hidden-xs hidden-sm">
+				<h4>About Me</h4>
+				<ul class="list-unstyled">
+				{% for contact in site.contact %} 
+					<li><a href = "{{ contact[1] }}">{{ contact[0] }}</a></li>
+				{% endfor %}
+
+		{% assign pages_list = site.pages %}
+		{% assign group = 'navigation' %}
+		{% for node in pages_list %}
+			{% if node.title != null and group == node.group %}
+				<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+			{% endif %}
+		{% endfor %}
+		{% assign pages_list = nil %}
+		{% assign group = nil %}
+
+
+				</ul>
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm">
+				<h4>Feed</h4>
+				<ul class="list-unstyled">
+					<li><a href="{{ BASE_PATH }}{{ site.JB.atom_path }}">Atom Feed</a></li>
+					<li><a href="{{ BASE_PATH }}{{ site.JB.rss_path }}">RSS Feed</a></li>		
+				</ul>
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm">
+				<h4>Links</h4>
+				<ul class="list-unstyled">
+				{% for link in site.links %} 
+					<li><a href = "{{ link[1] }}">{{ link[0] }}</a></li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="subFooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 text-left">
+					© 2016 {{ site.author.name }}.<br />
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86132304-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,37 @@
+ <!-- NAVBAR
+    <div class="navbar-wrapper">
+      <div class="container">-->
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ HOME_PATH }}">
+				  <img src="{{ ASSET_PATH }}/img/avatar.jpg" class="homeavatar" />
+			  </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+        {% for link in site.links %} 
+				{% if BASE_PATH == link[1] %}
+					<li class="active"><a href = "{{ link[1] }}">{{ link[0] }}</a></li>
+				{% else %}
+					<li><a href = "{{ link[1] }}">{{ link[0] }}</a></li>
+				{% endif %}
+				{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+  <!--     </div>
+    </div>
+ NAVBAR-->
+
+
+
+ 

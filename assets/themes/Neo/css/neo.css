@@ -1,0 +1,118 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+html, body {
+    overflow-x: hidden;
+}
+hr {
+    clear: both;
+}
+.navbar{
+    border-radius: 0;
+}
+.nav.nav-tabs.nav-stacked.affix {
+    top: 1px;
+}
+img.homeavatar {
+    border-radius: 50%;
+    height: 3em;
+    /* width: 3em; */
+}
+
+a.navbar-brand {
+    padding: 3px 15px;
+    font-size: 1em;
+}
+
+.neotitle {
+    padding-bottom: 1.5em;
+}
+
+.neotitle h1, .neotitle h2 {
+    display: inline;
+}
+/*页脚*/
+footer {
+    background-color: #333333;
+    color: #d4d4d4;
+    font-size: 14px;
+}
+footer .footerWrap {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.footer_stats {
+    background: #eeeeee;
+    border-top: 1px solid #dddddd;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+footer a {
+    color: #d4d4d4;
+    padding-left: 2em;
+}
+footer h4 {
+    border-bottom: 1px dotted #777;
+    font-size: 1.5em;
+    font-weight: 3em;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+}
+
+footer .subFooter {
+    color: #d4d4d4;
+    font-size: 12px;
+    padding: 12px 0;
+    background-color: #222;
+}
+/*侧边栏*/
+.widget {
+    padding: 20px 30px;
+}
+.widget .title {
+    margin-top: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+    position: relative;
+}
+.widget .title:after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background: #428bca;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.tag-cloud a {
+    border: 1px solid #ebebeb;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.pagecontent {
+    line-height: 1.8em;
+}
+.pagecontent img {
+    max-width: 100%;
+}
+.pagecontent h2 {
+    margin-top: 0;
+}
+.pubdateauthor {
+    text-align: right;
+    border-top: 1px solid #eee;
+    margin-bottom: 0.5em;
+}
+li {
+    line-height: 1.8em;
+}
